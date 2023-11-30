@@ -1,0 +1,48 @@
+section#first{
+    & .container{
+        border-bottom: solid 1px rgba(0,0,0,.14);
+        & .col{
+            & .card{
+                overflow: hidden;
+                & .card-body{
+                    overflow: hidden;
+                    & h1.card-title{
+                        text-align: center;
+                        & a{
+                            transition: all .3s ease;
+                            line-height: 1.3;
+                            text-align: center;
+                            font-size: 4rem;
+                        }
+                    }
+                    & p.card-text{
+                        text-align: center;
+                    }
+                    & .time_author {
+                        display: flex;
+                        justify-content: center;
+                        color: rgb(230, 61, 61);
+                        & .time {
+                            justify-content: space-evenly;
+                            padding: 0 1rem 0 0;
+                            font-size: larger;
+                            text-align: inherit;
+                            margin: auto 0;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                & .card-img-bottom {
+                    overflow: hidden;
+                    height: 40rem;
+                    object-fit: cover;
+                    transition: all ease-in-out 2s;
+                    &:hover{
+                        transform: scale(1.04);
+                        transition: all ease-in-out 4s;
+                    }
+                }
+            }
+        }
+    }
+}

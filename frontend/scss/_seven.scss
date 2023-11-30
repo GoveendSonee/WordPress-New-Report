@@ -1,0 +1,61 @@
+section#seven{
+    padding: 0 0 1.5rem;
+    & .col-lg-3.col-md-12.col-sm-12{
+        & .col-lg-12.col-md-6.col-sm-12{
+            & .card{
+                & .card-img-bottom {
+                    height: 15rem;
+                }
+                & .card-body {
+                    padding: 2rem 0 3rem;
+                    & .card-title {
+                        text-align: -webkit-auto;
+                    }
+                    & h4.card-title {
+                        font-size: 1.5rem;
+                        opacity: .8;
+                        font-weight: 700;
+                    }
+                    & .time_author {
+                        justify-content: left;
+                    }
+                    & p.card-text {
+                        font-size: 1.1rem;
+                        opacity: .68;
+                        font-weight: 400;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    & .col-lg-6.col-md-12.col-sm-12{
+        padding: 0 0 1rem 0;
+        & .card-body {
+            background: rgba(235, 212, 212, 0.16);
+            & h1.card-title {
+                opacity: .8;
+                font-weight: 700;
+            }
+        }
+    }
+    & .col-lg-4.col-md-6.col-sm-12{
+        & .news{
+            & .col-lg-8.col-md-6.col-sm-12{
+                    & .card-body {
+                        padding: 1rem 0 0;
+                        & h5.card-title{
+                            opacity: .68;
+                            font-size: 1.1rem;
+                            font-weight: 700;
+                        }
+                        & .time_author {
+                            justify-content: left;
+                            font-size: .8rem;
+                        }
+                    }
+            }
+        }
+    }
+}

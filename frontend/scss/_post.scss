@@ -1,0 +1,47 @@
+.main-title.post{
+    & .content{
+        & h2.title {
+            padding: 1rem 0 0;
+            font-size: 3.5rem;
+            color: rgb(88, 83, 83);
+        }
+    }
+    & .col-lg-4.col-md-12{
+        & .col-lg-12.col-md-4.col-sm-6{
+            & .card {
+                background: rgb(249, 242, 239);
+                margin: 1rem;
+            }
+        }
+    }
+    & .col-lg-8.col-md-12{
+        & h3.sub-title {
+            font-size: larger;
+            font-weight: 400;
+            color: rgb(91, 88, 88);
+            padding: 1rem;
+        }
+        & .time_authors {
+            padding: 1rem 0 2rem;
+            display: flex;
+            color: rgb(230, 61, 61);
+            & .time {
+                padding: 0 1rem 0 0;
+                font-size: larger;
+                text-align: inherit;
+                margin: auto 0;
+                opacity: 0.8;
+            }
+        }
+        & #relatedpost{
+            & .row{
+                & .col-lg-4.col-md-6.col-sm-12{
+                    & .card {
+                        margin: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+

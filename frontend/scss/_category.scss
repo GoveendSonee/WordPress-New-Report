@@ -1,0 +1,36 @@
+section#cat{
+    margin: 1rem 0 3rem 0;
+    & .col-lg-4.col-md-6.col-sm-12{
+        & .card{
+            overflow: hidden;
+            margin: .5rem 0;
+            background: rgb(246, 239, 239);
+            & .card-img-bottom {
+                height: 15rem;
+                transition: ease-in-out 2s;
+                opacity: .9;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: ease-in-out 3s;
+                    opacity: 1;
+                }
+            }
+            & .card-body {
+                margin: 0 1rem 1rem;
+                padding: 3rem 1rem;
+                background: rgb(246, 239, 239);
+                & .card-title {
+                    text-align: -webkit-auto;
+                }
+                & h4.card-title {
+                    font-size: 1.5rem;
+                    opacity: .8;
+                    font-weight: 700;
+                }
+                & .time_author {
+                    justify-content: left;
+                }
+            }
+        }
+    }
+}

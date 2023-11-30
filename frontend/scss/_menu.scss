@@ -1,0 +1,36 @@
+.bg-light {
+    background: #dd3333!important;
+}
+.tdm-svg {
+    transform-origin: 50% 50% 0;
+    width: 100%;
+    min-width: 1000px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5rem;
+    fill: #dd3333;
+    transform: rotate(180deg);
+    position: initial;
+}
+
+
+section#menu{
+    background: #dd3333!important;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    & .nav-item a {
+        color: #fff!important;
+        font-weight: 700;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-family: 'Open Sans', 'Open Sans Regular', sans-serif;
+    }
+    & .btn-outline-success {
+        color: #d73737;
+        border-color: #fff;
+        background: #fff;
+        font-weight: bolder;
+        font-size: larger;
+    }
+}

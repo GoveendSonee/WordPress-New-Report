@@ -1,0 +1,32 @@
+section#top_header{
+    & .col-lg-4.col-md-6.col-sm-12{
+        & .card-body{
+            & .card{
+                & .logo {
+                    height: 9rem;
+                    width: 17rem;
+                } 
+                & .date_time{
+                    font-weight: 800;
+                    padding: 0 0 0 3rem;
+                }
+                & .js_time{
+                    padding: 0 0 0 3rem;
+                    & .times {
+                        font-weight: 300;
+                        font-size: large;
+                        color: red;
+                        display: flex;
+                        & span{
+                            font-weight: bold;
+                            padding: 0 0 0 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .col-lg-8.col-md-6.col-sm-12{
+        margin: auto;
+    }
+}

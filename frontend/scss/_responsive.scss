@@ -1,0 +1,198 @@
+.navbar-light .navbar-toggler-icon {
+    color: #fff!important;
+    border: 4px solid #fff;
+    box-shadow: 1px 1px 8px 8px #fff;
+    cursor: pointer;
+}
+
+#relatedpost .col-lg-4.col-md-6.col-sm-12 .card-body {
+    padding: 1rem 0 0;
+    font-size: small;
+    & .card-title {
+        margin-bottom: 0.5rem;
+        font-size: 1.32rem;
+        font-weight: 600;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    section#first {
+        & .container{
+            & .col{
+                & .card{
+                    & .card-body{
+                        & h1.card-title{
+                            margin: 0;
+                            padding: .7rem 0;
+                            & a {
+                                font-size: larger;
+                            }
+                        }
+                        & .time_author {
+                            padding: 0 0 .61rem 0;
+                        }
+                        & p.card-text {
+                            padding: 0 0 1.2rem 0;
+                            font-size: large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#footer .col-lg-4.col-md-6.col-sm-12 .card {
+        background: #dd3333 !important;
+        text-align: center;
+        align-items: center;
+    }
+
+    section#footer .col-lg-4.col-md-6.col-sm-12 .category {
+        text-align: center;
+        align-items: center;
+        display: inline-grid;
+    }
+
+    #footer_last .copyright_text {
+        font-size: inherit;
+        font-weight: 800;
+    }
+
+    .main-title.post .content h2.title {
+        padding: 1rem 0 0;
+        font-size: 2.5rem;
+        color: #585353;
+    }
+    .main-title.post .col-lg-8.col-md-12 .card-body {
+        padding: 0;
+    }
+
+    .main-title.post .col-lg-8.col-md-12 .card-body p.card-text {
+        font-size: larger;
+        text-align: justify;
+    }
+
+    section#top_header .col-lg-4.col-md-6.col-sm-12 .card {
+        text-align: center;
+        align-items: center;
+    }
+
+    section#top_header .col-lg-4.col-md-6.col-sm-12 .card img.logo {
+        margin: 0 0 1rem;
+    }
+
+    section#first .container .col .card .card-body h1.card-title a {
+        font-size: larger;
+    }
+
+    section#fourth .col-lg-3.col-md-12.col-sm-12 .col-lg-12.col-md-6.col-sm-12 .card .card-img-bottom,
+    section#sixth .col-lg-3.col-md-12.col-sm-12 .col-lg-12.col-md-6.col-sm-12 .card .card-img-bottom,
+    section#seven .col-lg-3.col-md-12.col-sm-12 .col-lg-12.col-md-6.col-sm-12 .card .card-img-bottom
+    {
+        height: 17rem;
+        object-fit: cover;
+    }
+
+    section#sixth .col-lg-3.col-md-12.col-sm-12 .card.social {
+        margin: 0 0 1rem 0;
+        padding: 1rem;
+        background-color: #f8f1e1;
+    }
+
+
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) { 
+
+    section#menu{
+        & .navbar-collapse {
+            text-align: center;
+            transition: all ease-in-out 3s;
+            padding: 1rem 0;
+        }
+    }
+   
+    section#first {
+        & .container{
+            & .col{
+                & .card{
+                    & .card-body{
+                        padding: 0;
+                        & h1.card-title{
+                            margin: 0;
+                            padding: 1rem 0;
+                            & a {
+                                line-height: 1.13;
+                                text-align: center;
+                                font-size: 3rem;
+                            }
+                        }
+                        & .time_author {
+                            padding: 0 0 1rem 0;
+                        }
+                        & p.card-text {
+                            padding: 0 0 1.5rem 0;
+                            font-size: large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#fourth{
+        & .col-lg-3.col-md-12.col-sm-12{
+            & .col-lg-12.col-md-6.col-sm-12{
+                & .card-body{
+                    & h4.card-title {
+                        font-size: 1.3rem;
+                    }
+                    & .time_author {
+                        font-size: initial;
+                    }
+                }
+            }
+        }
+        & .col-lg-6.col-md-12.col-sm-12{
+            & .card-body{
+                text-align: center;
+                & h1.card-title {
+                    font-size: xx-large;
+                }
+                & p.card-text {
+                    margin: 0;
+                    font-size: larger;
+                }
+            }
+        }
+    }
+
+    section.post-page-area{
+        & .col-lg-4.col-md-12{
+            & section#third{
+                & .col-lg-12.col-md-4.col-sm-6 {
+                    padding: 0;
+                    & .card-body {
+                        padding: 1rem .8rem;
+                        & h4.card-title {
+                            font-size: large;
+                        }
+                        & .time_author {
+                            font-size: smaller;
+                            display: grid;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
