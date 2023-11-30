@@ -1,5 +1,5 @@
-  <!-- ADS  -->
-  <section id="ads">
+<!-- ADS  -->
+<section id="ads">
     <div class="container">
       <div class="card">
         <a href="http://" target="_blank" rel="noopener noreferrer">

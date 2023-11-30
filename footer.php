@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card">
-            <img src="img/footer logo.png" class="card-img-top" alt="...">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer logo.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h3 class="card-title">
                 <a href="http://">
