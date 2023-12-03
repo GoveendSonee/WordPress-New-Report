@@ -119,12 +119,7 @@ $options = get_option( '_prefix_my_options' );
             <br>
             <div class="category">
               <div class="row">
-              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Ffacebook.com%2Fpeople%2FBirgunj-report%2F100084344262449%2F&tabs=timeline&width=0&height=0&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="0" height="0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-              <!-- <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fferiikinumnala%2F&tabs=timeline&width=340&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=438827321627080"
-                  width="340" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                  allowfullscreen="true"
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100084344262449%26mibextid%3DZbWKwL&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="280" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
               </div>
             </div>
           </div>
@@ -145,22 +140,6 @@ $options = get_option( '_prefix_my_options' );
     </div>
   </section>
   <!-- End Footer  -->
-
-	<!-- <footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<php echo esc_url( __( 'https://wordpress.org/', 'birgunj-report' ) ); ?>">
-				<php
-				printf( esc_html__( 'Proudly powered by %s', 'birgunj-report' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<php
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'birgunj-report' ), 'birgunj-report', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div> 
-	</footer>
-</div> -->
-
 <?php wp_footer(); ?>
 
 </body>
