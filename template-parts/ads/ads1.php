@@ -1,11 +1,12 @@
+<?php
+  $options = get_option( '_prefix_my_options' ); 
+?>
 <!-- ADS  -->
 <section id="ads">
-    <div class="container">
-      <div class="card">
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ads.png" class="card-img-bottom" alt="img/ads.png">
-        </a>
-      </div>
+  <div class="container">
+    <div class="card">
+        <img src="<?php echo $options['gallery_iconfields_one']; ?>" class="card-img-bottom" alt="">
     </div>
-  </section>
-  <!-- End ADS  -->
+  </div>
+</section>
+<!-- End ADS  -->

@@ -1,4 +1,7 @@
 <!-- Sixth Section  -->
+<?php
+  $options = get_option( '_prefix_my_options' ); 
+?>
 <section id="sixth">
   <div class="container">
     <div class="row">
@@ -341,28 +344,35 @@
       </div>
       <div class="col-lg-3 col-md-12 col-sm-12">
         <div class="category_heading_social">
-          <h5 class="heading">हामी सँग जोडिनुहोस</h5>
+          <h5 class="heading"><?php echo esc_html("हामी सँग जोडिनुहोस"); ?></h5>
         </div>
+        
         <div class="row">
           <div class="card social">
-            <div class="td_social_type td-pb-margin-side td_social_facebook">
-              <div class="td-social-box">
-                <i class="fa-brands fa-facebook-square"></i>
-                <a href="http://" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <?php if ($options['social_media_fields_facebook']) { ?>
+              <div class="td_social_type td-pb-margin-side td_social_facebook">
+                <div class="td-social-box">
+                  <i class="fa-brands fa-facebook-square"></i>
+                  <a href="<?php echo $options['social_media_fields_facebook']; ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html("Facebook"); ?></a>
+                </div>
               </div>
-            </div>
-            <div class="td_social_type td-pb-margin-side td_social_twitter">
-              <div class="td-social-box">
-                <i class="fa-brands fa-twitter-square"></i>
-                <a href="http://" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <?php } ?>
+            <?php if ($options['social_media_fields_twitter']) { ?>
+              <div class="td_social_type td-pb-margin-side td_social_twitter">
+                <div class="td-social-box">
+                  <i class="fa-brands fa-twitter-square"></i>
+                  <a href="<?php echo $options['social_media_fields_twitter']; ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html("Twitter"); ?></a>
+                </div>
               </div>
-            </div>
-            <div class="td_social_type td-pb-margin-side td_social_youtube">
-              <div class="td-social-box">
-                <i class="fa-brands fa-youtube-square"></i>
-                <a href="http://" target="_blank" rel="noopener noreferrer">Youtube</a>
+            <?php } ?>
+            <?php if ($options['social_media_fields_youtube']) { ?>
+              <div class="td_social_type td-pb-margin-side td_social_youtube">
+                <div class="td-social-box">
+                  <i class="fa-brands fa-youtube-square"></i>
+                  <a href="<?php echo $options['social_media_fields_youtube']; ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html("Youtube"); ?></a>
+                </div>
               </div>
-            </div>
+            <?php } ?>
           </div>
         </div>
         <div class="category_heading_post">

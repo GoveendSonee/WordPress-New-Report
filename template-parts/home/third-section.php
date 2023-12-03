@@ -1,15 +1,15 @@
 
 <?php
-$args = array(
-    'post_type'      => 'post',
-    'posts_per_page' => 1,
-    'order'          => 'DESC',
-    'orderby'        => 'date',
-    'offset'         => 2,
-);
+  $args = array(
+      'post_type'      => 'post',
+      'posts_per_page' => 1,
+      'order'          => 'DESC',
+      'orderby'        => 'date',
+      'offset'         => 2,
+  );
 
-$query = new WP_Query($args);
-if ($query->have_posts()) :
+  $query = new WP_Query($args);
+  if ($query->have_posts()) :
   while ($query->have_posts()) : $query->the_post();
 ?>
   <section id="first">
@@ -49,7 +49,7 @@ if ($query->have_posts()) :
   </section>
 
 <?php
-endwhile;
-wp_reset_postdata();
-endif;
+  endwhile;
+  wp_reset_postdata();
+  endif;
 ?>

@@ -15,11 +15,9 @@
 <section class="post-page-area">
 	<div class="container">
 		<!-- Ads  -->
-		<section id="ads">
-			<div class="card">
-				<img src="img/ads.png" class="card-img-top" alt="...">
-			</div>
-		</section>
+		<?php
+          get_template_part( 'template-parts/ads/ads1' , '' ); 
+        ?>
 		<!-- End Ads  -->
 		<!--single page-->
 		<div class="main-title post">
@@ -77,39 +75,20 @@
 							?>
 						</div>
 
-						<!-- Ads  -->
-						<section id="ads">
-							<div class="card">
-								<img src="img/ads.png" class="card-img-top" alt="...">
-							</div>
-						</section>
-						<!-- End Ads  -->
-
-						<!-- Ads  -->
-						<section id="ads">
-							<div class="card">
-								<img src="img/ads.png" class="card-img-top" alt="...">
-							</div>
-						</section>
-						<!-- End Ads  -->
+						<?php
+							get_template_part( 'template-parts/ads/ads2' , '' ); 
+							get_template_part( 'template-parts/ads/ads3' , '' ); 
+						?>
 
 						<!--Socail Plugins-->
 						<div class="comments">
-							<h2>प्रतिक्रिया</h2>
-							<div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop"
-								data-width="100%" data-href="https://www.meronews.com/2022/02/104518.html"
-								data-numposts="7" fb-xfbml-state="rendered"
-								fb-iframe-plugin-query="app_id=844459216167725&amp;container_width=777&amp;height=100&amp;href=https%3A%2F%2Fwww.meronews.com%2F2022%2F02%2F104518.html&amp;locale=en_US&amp;numposts=7&amp;sdk=joey&amp;version=v10.0&amp;width="
-								style="width: 100%;"><span
-									style="vertical-align: bottom; width: 100%; height: 287px;"><iframe
-										name="fb7f135b887358" width="1000px" height="100px"
-										data-testid="fb:comments Facebook Social Plugin"
-										title="fb:comments Facebook Social Plugin" frameborder="0"
-										allowtransparency="true" allowfullscreen="true" scrolling="no"
-										allow="encrypted-media"
-										src="https://www.facebook.com/v10.0/plugins/comments.php?app_id=844459216167725&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df18a28e6cd52b9%26domain%3Dwww.meronews.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.meronews.com%252Ff1a52ca84a95928%26relation%3Dparent.parent&amp;container_width=777&amp;height=100&amp;href=https%3A%2F%2Fwww.meronews.com%2F2022%2F02%2F104518.html&amp;locale=en_US&amp;numposts=7&amp;sdk=joey&amp;version=v10.0&amp;width="
-										style="border: none; visibility: visible; width: 100%; height: 287px;"
-										class=""></iframe></span></div>
+							<h2><?php echo esc_html("प्रतिक्रिया"); ?></h2>
+							<?php
+								if (comments_open() || get_comments_number()) :
+									comments_template();
+								endif;
+							?>
+
 						</div>
 						<!--End Socail Plugins-->
 						<br>
@@ -117,7 +96,7 @@
 
 						<section id="relatedpost">
 							<div class="category_heading sum">
-								<h1 class="heading"><a href="#"><?php echo esc_html("सम्बन्धित"); ?></a></h1>
+								<h1 class="heading"><a><?php echo esc_html("सम्बन्धित"); ?></a></h1>
 							</div>
 							<div class="row">
 								<?php
@@ -246,36 +225,9 @@
 					
 					<!--Ads-->
 					<div class="row">
-						<div class="col-lg-12 col-md-4">
-							<!--1 Ads-->
-							<div class="border card">
-								<div class="full-banner">
-									<img src="image/adssquare.jpg" class="card-img-bottom"
-										alt="">
-								</div>
-							</div>
-							<!--End ads-->
-						</div>
-						<div class="col-lg-12 col-md-4">
-							<!--1 Ads-->
-							<div class="border card">
-								<div class="full-banner">
-									<img src="image/adssquare.jpg" class="card-img-bottom"
-										alt="">
-								</div>
-							</div>
-							<!--End ads-->
-						</div>
-						<div class="col-lg-12 col-md-4">
-							<!--1 Ads-->
-							<div class="border card">
-								<div class="full-banner">
-									<img src="image/adssquare.jpg" class="card-img-bottom"
-										alt="">
-								</div>
-							</div>
-							<!--End ads-->
-						</div>
+						<?php
+							get_template_part( 'template-parts/ads/ads5' , '' ); 
+						?>
 					</div>
 
 				</div>
@@ -288,3 +240,4 @@
 <?php
 	endwhile; 
 	get_footer();
+?>

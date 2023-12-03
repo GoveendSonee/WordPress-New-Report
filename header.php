@@ -8,7 +8,7 @@
  *
  * @package Birgunj_Report
  */
-
+  $options = get_option( '_prefix_my_options' ); 
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -34,8 +34,9 @@
               <?php
                 $custom_logo_id = get_theme_mod('custom_logo');
                 if ($custom_logo_id) {
-                    $logo_image = wp_get_attachment_image_src($custom_logo_id, 'full');
-                    echo '<img src="' . esc_url($logo_image[0]) . '" class="logo" alt="Custom Logo">';
+                  $logo_image = wp_get_attachment_image_src($custom_logo_id, 'full');
+                  $home_url = esc_url(home_url('/')); // Get the home URL
+                  echo '<a href="' . $home_url . '"><img src="' . esc_url($logo_image[0]) . '" class="logo" alt="Custom Logo"></a>';
                 }
               ?>
             </div>
@@ -45,7 +46,7 @@
               </div>
               <div class="js_time">
                 <h4 class="times">
-                  वीरगन्ज <span>
+                  <?php echo esc_html("वीरगन्ज : "); ?> <span>
                     <div id="TIME_IN_NEPALI"></div>
                   </span>
                 </h4>
@@ -53,13 +54,10 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-8 col-md-6 col-sm-12">
-          <div class="card-body">
-            <div class="card">
-              <img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/assets/img/Combined_700x80px-1.gif" alt="">
-            </div>
-          </div>
-        </div>
+        <!-- Ads -->
+        <?php
+          get_template_part( 'template-parts/ads/adsheader' , '' ); 
+        ?>
       </div>
     </div>
   </section>
@@ -76,44 +74,16 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">होमपेज</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">समाचार</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">मधेश-प्रदेश</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">विजनेस</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">जीवनशैली</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">मनोरन्जन</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">विचार</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">प्रवास</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">खेलकुद</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">अन्य</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search Keyword" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
+
+            <?php
+              wp_nav_menu(array(
+                'theme_location'  => 'menu-1',
+                'container'       => 'ul',
+                'menu_class'      => 'navbar-nav me-auto mb-2 mb-lg-0',
+                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+              ));
+            ?>
+
           </div>
         </div> 
       </nav>

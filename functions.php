@@ -195,3 +195,34 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 @ini_set( 'upload_max_filesize' , '128M' );
 @ini_set( 'post_max_size', '128M');
 @ini_set( 'max_execution_time', '300' );
+
+
+add_filter( 'nav_menu_css_class', 'menu_item_classes', 10, 4 );
+
+function menu_item_classes( $classes, $item, $args, $depth ) {
+
+    unset($classes);
+
+    $classes[] = 'nav-item';
+
+    return $classes;
+}
+
+
+function add_nav_link_class($atts, $item, $args) {
+    if (isset($args->theme_location) && $args->theme_location === 'menu-1') {
+        $atts['class'] = 'nav-link'; 
+    }
+    return $atts;
+}
+
+add_filter('nav_menu_link_attributes', 'add_nav_link_class', 10, 3);
+
+ 
+/**
+ *
+ * Mithila Code Creation Function Hook
+ * WordPress Callback
+ *
+ */
+require_once get_theme_file_path() .'/inc/mithilacodecreation/mithilacodecreation-framework.php';
