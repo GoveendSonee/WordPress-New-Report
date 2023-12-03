@@ -1,35 +1,66 @@
 
-  <!-- First Section  -->
+<?php
+$args = array(
+    'post_type'      => 'post',
+    'posts_per_page' => 2,
+    'order'          => 'DESC',
+    'orderby'        => 'date',
+);
+
+$query = new WP_Query($args);
+if ($query->have_posts()) :
+  while ($query->have_posts()) : $query->the_post();
+?>
   <section id="first">
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="card">
             <div class="card-body">
-              <h1 class="card-title"><a href="#">सशस्त्र र नेपाल प्रहरीका आईजीपीले लगाए दर्ज्यानी चिह्न</a></h1>
+              <h1 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
               <div class="time_author">
                 <div class="time">
                   <i class="fa-solid fa-clock"></i>
-                  <small class="text-mute">१२ मिनेट अगाडि</small>
+                  <?php 
+                    $post_time = get_the_time('U');
+                    $time_ago = human_time_diff($post_time, current_time('U')) . '';
+                    echo '<small class="text-mute">' . $time_ago . '</small>';
+                  ?>
                 </div>
                 <div class="author">
                   <i class="fa-solid fa-user"></i>
-                  <strong>वीरगन्ज रिपोर्ट </strong>
+                  <?php
+                  $writer_name = get_post_meta(get_the_ID(), 'writer_name', true);
+                  echo '<strong>'. (!empty($writer_name) ? $writer_name : get_the_author()) . '</strong>';
+                  ?>
                 </div>
               </div>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news1.jpg" class="card-img-bottom" alt="img/news1.jpg">
+            <?php
+              if ( has_post_thumbnail() ) { 
+                  the_post_thumbnail('large', array('class' => 'card-img-bottom'));
+              }
+              else {
+                  $custom_logo_id = get_theme_mod( 'custom_logo' );
+                  $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+              ?>
+                  <img class="card-img-bottom" src="<?php echo $image[0]; ?>" alt="<?php the_title_attribute(); ?>">
+              <?php 
+              }
+            ?>
             <div class="card-body">
-              <p class="card-text">
-                १९ वैशाख, काठमाडौं । सशस्त्र प्रहरी बल र नेपाल प्रहरीका नवनियुक्त महानिरीक्षक (आईजीपी)ले आज दर्ज्यानी
-                चिह्न लगाएका छन् । सशस्त्र प्रहरी बलका महानिरीक्षक राजु अर्याल र नेपाल प्रहरीका महानिरीक्षक धिरजप्रताप
-                सिंहलाई गृह मन्त्रालयका सचिव टेक नारायण पाण्डेले दर्ज्यानी चिह्न लगाइदिएका हुन् । अर्याल र सिंहलाई
-                आइतबारको मन्त्रिपरिषद बैठकले महानिरीक्षक...
-              </p>
+              <?php
+                echo '<p class="card-text">' . wp_trim_words(get_the_excerpt(), 45) . '</p>';
+              ?>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End First Section  -->
+
+<?php
+endwhile;
+wp_reset_postdata();
+endif;
+?>

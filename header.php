@@ -12,27 +12,32 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
-	<title>वीरगन्ज रिपोर्ट </title>
+  <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 	<?php wp_head(); ?>
 </head>
 
 <body onload=updateClock(); <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-  <!-- Top Header  -->
   <section id="top_header">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card-body">
             <div class="card">
-              <img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="janakpur_times_logo">
+              <?php
+                $custom_logo_id = get_theme_mod('custom_logo');
+                if ($custom_logo_id) {
+                    $logo_image = wp_get_attachment_image_src($custom_logo_id, 'full');
+                    echo '<img src="' . esc_url($logo_image[0]) . '" class="logo" alt="Custom Logo">';
+                }
+              ?>
             </div>
             <div class="card">
               <div class="date_time">
