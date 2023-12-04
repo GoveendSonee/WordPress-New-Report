@@ -1,8 +1,8 @@
 /*!
 Theme Name: Birgunj Report
 Theme URI: https://mithilacodecreation.com/
-Author: Govind Soni
-Author URI: https://govindsah.com.np/
+Author: Mithila code creation
+Author URI: https://mithilacodecreation.com.np/
 Description: Hi. I'm a starter theme called <code>Birgunj Report</code>, or <em>mithilacodecreation</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 Version: 1.0.0
 Tested up to: 5.4
@@ -21,3 +21,51 @@ mithilacodecreation is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+.pagination-container.centreposition {
+    text-align: center;
+    padding: 3rem 0 0;
+}
+
+.pagination-container.centreposition span.page-numbers.current {
+    background: red;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.pagination-container.centreposition a.page-numbers {
+    color: red;
+    background: #fff;
+    padding: 0 1rem;
+		border: 1px solid red;
+}
+
+ul#menu-primary-menu {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+}
+
+section#seven .col-lg-4.col-md-6.col-sm-12 .news .col-lg-4.col-md-6.col-sm-12 img.card-img-bottom.wp-post-image {
+    height: 6rem;
+    object-fit: cover;
+}
+
+section#sixth .col-lg-6.col-md-12.col-sm-12 .hero_first .col-12 .news .col-lg-4.col-md-6.col-sm-12 img.card-img-bottom.wp-post-image {
+    height: -webkit-fill-available;
+}
+
+section#sixth .col-lg-6.col-md-12.col-sm-12 .hero_second .col-lg-6.col-md-6.col-sm-12 img.card-img-bottom.wp-post-image {
+    height: 8rem;
+    object-fit: cover;
+}
+
+section#eight .card-img-overlay {
+    background: #b964508c;
+}
+
+
+section#relatedpost .col-lg-4.col-md-6.col-sm-12 img.card-img-bottom {
+    height: 11rem;
+    object-fit: cover;
+}
